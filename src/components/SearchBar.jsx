@@ -19,6 +19,7 @@ function SearchBar({ onSearch }) {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Search books by title..."
+w          aria-label="Search books by title"
           className="pl-10 pr-5 py-3 rounded-full shadow-lg focus:ring-2 focus:ring-blue-500 w-full"
         />
         <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">

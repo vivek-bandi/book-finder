@@ -13,7 +13,6 @@ export const useFetchBooks = () => {
     setBooks([]);
     try {
       const data = await fetchBooks(query);
-      if (data.length === 0) setError("No books found.");
       setBooks(data.slice(0, 20)); // limit results
     } catch (err) {
       setError("Something went wrong. Try again!");

@@ -6,7 +6,7 @@ function BookCard({ book }) {
 
   return (
     <div className="bg-white/30 backdrop-blur-md border border-white/30 rounded-xl shadow-lg overflow-hidden hover:scale-105 hover:shadow-2xl transition-transform duration-300">
-      <img src={cover} alt={book.title} className="w-full h-64 object-cover" />
+      <img src={cover} alt={book.title} className="w-full h-64 object-cover" onError={(e) => { e.target.src = placeholder; }} />
       <div className="p-5 flex flex-col">
         <h2 className="font-bold text-lg mb-1">{book.title}</h2>
         {book.author_name && (
